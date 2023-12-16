@@ -1,0 +1,39 @@
+.bg-login {
+    background: linear-gradient(0deg, rgba(0, 43, 82, 1) 47%, rgba(25, 77, 124, 1) 100%);
+}
+
+.bg-login-card {
+    background: linear-gradient(0deg, rgba(0, 43, 82, 1) 0%, rgba(30, 92, 148, 1) 100%);
+}
+
+.bg-green {
+    background-color: #66AF49;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.bg-sidebar {
+    background: linear-gradient(180deg, rgba(31, 175, 45, 1) 30%, rgba(25, 77, 124, 1) 100%);
+}
+
+.max-height-forum-dashboard {
+    max-height: 40vh;
+}
+
+.font-black {
+    color: black
+}
+
+.overlay-dashboard {
+    filter: brightness(40%);
+}
+
+.selection-forum {
+    cursor: pointer;
+    &:hover {
+        background-color: #1CAF2C;
+        color: white;
+    }
+}

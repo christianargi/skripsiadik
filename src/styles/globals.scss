@@ -1,0 +1,25 @@
+$enable-negative-margins: true;
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "layout/avatar";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/progress";
+@import "layout/sidebar";
+
+@import "~nprogress/nprogress.css";
+
+@import "_custom";
+
+
+$utilities: (
+    "opacity": (property: opacity,
+        values: (0: 0,
+            25: .25,
+            50: .5,
+            75: .75,
+            80: .80,
+            100: 1,
+        )),
+);
