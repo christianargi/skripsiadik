@@ -68,7 +68,7 @@ export default function Header(props: HeaderProps) {
       </Container>
       <div className="header-divider border-top my-2 mx-sm-n2" />
       <Container fluid>
-        <div className="fs-5 fw-bold">{finalPathname()}</div>
+        <div className="fs-5">{finalPathname()}</div>
       </Container>
     </header>
   );

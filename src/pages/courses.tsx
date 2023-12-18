@@ -22,6 +22,8 @@ import { IoChatbubblesOutline } from "react-icons/io5";
 import React from "react";
 import { AdminLayout } from "@layout";
 import Carousel from "react-bootstrap/Carousel";
+import Dropdown from "react-bootstrap/Dropdown";
+import Form from "react-bootstrap/Form";
 
 Chart.register(
   CategoryScale,
@@ -64,177 +66,62 @@ const forumList: any = [
   },
 ];
 
+const listMateri = [
+  {
+    id: 1,
+    Title: "Science",
+    Chapter: "Chapter 4 of 12",
+    SubTitle: "Vector",
+  },
+  {
+    id: 2,
+    Title: "Math",
+    Chapter: "Chapter 4 of 12",
+    SubTitle: "Aljabr",
+  },
+  {
+    id: 3,
+    Title: "Biology",
+    Chapter: "Chapter 4 of 12",
+    SubTitle: "Fotosintesis",
+  },
+  {
+    id: 4,
+    Title: "Cheimstry",
+    Chapter: "Chapter 4 of 12",
+    SubTitle: "Periodic Table",
+  },
+  {
+    id: 5,
+    Title: "Cheimstry",
+    Chapter: "Chapter 4 of 12",
+    SubTitle: "Periodic Table",
+  },
+];
+
 const Course: NextPage = () => (
   <AdminLayout>
     <div className="row">
-      <div className="col-md-6">
-        <div className="row ps-3 pb-2 fs-4">School Events</div>
-        <div className="row ps-1 max-height-forum-dashboard">
-          <Carousel controls={false} className="max-height-forum-dashboard">
-            <Carousel.Item>
-              <Image
-                className="rounded-3 max-height-forum-dashboard overlay-dashboard"
-                src="/assets/img/dummyImage.png"
-                alt=""
-                width={300}
-                height={500}
-                style={{ width: "100%", height: "auto" }}
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <Image
-                className="rounded-3 max-height-forum-dashboard overlay-dashboard"
-                src="/assets/img/dummyImage.png"
-                alt=""
-                width={300}
-                height={500}
-                style={{ width: "100%", height: "auto" }}
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <Image
-                className="rounded-3 max-height-forum-dashboard overlay-dashboard"
-                src="/assets/img/dummyImage.png"
-                alt=""
-                width={300}
-                height={500}
-                style={{ width: "100%", height: "auto" }}
-              />
-            </Carousel.Item>
-          </Carousel>
-        </div>
+      <div className="col-md-3">
+        <Form.Select aria-label="Choose Semester">
+          <option value="1">Choose Semester 1</option>
+          <option value="2">Choose Semester 2</option>
+          <option value="3">Choose Semester 3</option>
+        </Form.Select>
       </div>
-      <div className="col-md-6 ">
-        <div className="row ps-3 pb-2 fs-4">Forum</div>
-        <div className="row px-3 ">
-          <Card className="max-height-forum-dashboard overflow-scroll pe-4">
-            <Card.Body>
-              {forumList.map((value: any, idx: any) => {
-                return (
-                  <div className="border px-2 rounded-2 py-2 mb-2 flex justify-content-center row align-item-center selection-forum" key={idx}>
-                    <div className="d-flex flex-column col-2 align-items-center justify-content-center">
-                      <IoChatbubblesOutline className="fs-3" />
-                    </div>
-                    <div className="d-flex flex-column col-4 fs-5">
-                      {value.forumName}
-                    </div>
-                  </div>
-                );
-              })}
-            </Card.Body>
-          </Card>
-        </div>
-      </div>
-      <div className="col-md-12 mt-5 border-top pt-4">
-        <div className="row ps-3 pb-2 fs-4">Billboard</div>
-        <div className="row ps-1 max-height-forum-dashboard">
-          <Carousel controls={false} className="max-height-forum-dashboard">
-            <Carousel.Item>
-              <Image
-                className="rounded-3 max-height-forum-dashboard overlay-dashboard"
-                src="/assets/img/billboardImage2.jpeg"
-                alt=""
-                width={300}
-                height={500}
-                style={{ width: "100%", height: "auto" }}
-              />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <Image
-                className="rounded-3 max-height-forum-dashboard overlay-dashboard"
-                src="/assets/img/billboardImage2.jpeg"
-                alt=""
-                width={300}
-                height={500}
-                style={{ width: "100%", height: "auto" }}
-              />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <Image
-                className="rounded-3 max-height-forum-dashboard overlay-dashboard"
-                src="/assets/img/billboardImage2.jpeg"
-                alt=""
-                width={300}
-                height={500}
-                style={{ width: "100%", height: "auto" }}
-              />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
-        </div>
-      </div>
-      <div className="col-md-12 mt-5 border-top pt-4">
-        <div className="row ps-3 pb-2 fs-4">Displaying Vote</div>
-        <div className="row ps-1 max-height-forum-dashboard">
-          <Carousel controls={false} className="max-height-forum-dashboard">
-            <Carousel.Item>
-              <Image
-                className="rounded-3 max-height-forum-dashboard overlay-dashboard"
-                src="/assets/img/billboardImage.jpeg"
-                alt=""
-                width={500}
-                height={800}
-                style={{ width: "100%", height: "auto" }}
-              />
-              <Carousel.Caption className="text-white">
-                <h3>First slide label</h3>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <Image
-                className="rounded-3 max-height-forum-dashboard overlay-dashboard"
-                src="/assets/img/billboardImage.jpeg"
-                alt=""
-                width={500}
-                height={800}
-                style={{ width: "100%", height: "auto" }}
-              />
-              <Carousel.Caption className="text-white">
-                <h3>First slide label</h3>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <Image
-                className="rounded-3 max-height-forum-dashboard overlay-dashboard"
-                src="/assets/img/billboardImage.jpeg"
-                alt=""
-                width={500}
-                height={800}
-                style={{ width: "100%", height: "auto" }}
-              />
-              <Carousel.Caption className="text-white">
-                <h3>First slide label</h3>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
-        </div>
-      </div>
+    </div>
+    <div className="row">
+      {listMateri.map((val: any, idx: any) => {
+        return (
+          <div className="col-md-3 mt-4">
+            <div className="rounded px-4 py-3 bg-white shadow">
+              <div className="row fs-4 fw-bolder">{val.Title}</div>
+              <div className="row fs-5 mt-2">{val.Chapter}</div>
+              <div className="row fs-6 mt-2">{val.SubTitle}</div>
+            </div>
+          </div>
+        );
+      })}
     </div>
   </AdminLayout>
 );
