@@ -123,6 +123,7 @@ const Session: NextPage = () => (
     <div className="row">
       <CoursesHeader bab={bab}/>
       <div className="row">
+        <div className="fs-4 mt-3">Title</div>
         <div className="p-3">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
