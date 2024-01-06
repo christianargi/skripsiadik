@@ -110,9 +110,9 @@ const Home: NextPage = () => (
         <div className="row px-3 ">
           <Card className="max-height-forum-dashboard overflow-scroll pe-4">
             <Card.Body>
-              {forumList.map((value: any) => {
+              {forumList.map((value: any, idx: any) => {
                 return (
-                  <div className="border px-2 rounded-2 py-2 mb-2 flex justify-content-center row align-item-center selection-forum">
+                  <div className="border px-2 rounded-2 py-2 mb-2 flex justify-content-center row align-item-center selection-forum" key={idx}>
                     <div className="d-flex flex-column col-2 align-items-center justify-content-center">
                       <IoChatbubblesOutline className="fs-3" />
                     </div>

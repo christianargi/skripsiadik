@@ -32,8 +32,23 @@
 
 .selection-forum {
     cursor: pointer;
+
     &:hover {
         background-color: #1CAF2C;
         color: white;
     }
+}
+
+.teacher-profile {
+    width: 4rem;
+    height: 4rem;
+}
+
+.teacher-profile-discussion {
+    width: 6rem;
+    height: 6rem;
+}
+
+.font-black {
+    color: black;
 }

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import {
+  Button,
   // Button,
   // ButtonGroup,
   Card,
@@ -24,6 +25,9 @@ import { AdminLayout } from "@layout";
 import Carousel from "react-bootstrap/Carousel";
 import Dropdown from "react-bootstrap/Dropdown";
 import Form from "react-bootstrap/Form";
+import Table from "react-bootstrap/Table";
+import { FaArrowLeft } from "react-icons/fa";
+import { CoursesHeader } from "@components/Courses/coursesHeader";
 
 Chart.register(
   CategoryScale,
@@ -72,58 +76,65 @@ const listMateri = [
     Title: "Science",
     Chapter: "Chapter 4 of 12",
     SubTitle: "Vector",
+    Guru: "Novaria Kemmel S.Pd.",
   },
   {
     id: 2,
     Title: "Math",
     Chapter: "Chapter 4 of 12",
     SubTitle: "Aljabr",
+    Guru: "Novaria Kemmel S.Pd.",
   },
   {
     id: 3,
     Title: "Biology",
     Chapter: "Chapter 4 of 12",
     SubTitle: "Fotosintesis",
+    Guru: "Novaria Kemmel S.Pd.",
   },
   {
     id: 4,
     Title: "Cheimstry",
     Chapter: "Chapter 4 of 12",
     SubTitle: "Periodic Table",
+    Guru: "Novaria Kemmel S.Pd.",
   },
   {
     id: 5,
     Title: "Cheimstry",
     Chapter: "Chapter 4 of 12",
     SubTitle: "Periodic Table",
+    Guru: "Novaria Kemmel S.Pd.",
   },
 ];
 
-const Course: NextPage = () => (
+const bab = [
+  { id: 1, name: "Bab - 1" },
+  { id: 2, name: "Bab - 2" },
+  { id: 3, name: "Bab - 4" },
+  { id: 4, name: "Bab - 5" },
+  { id: 5, name: "Bab - 6" },
+  { id: 6, name: "Bab - 7" },
+  { id: 7, name: "Bab - 8" },
+];
+
+const Session: NextPage = () => (
   <AdminLayout>
     <div className="row">
-      <div className="col-md-3">
-        <Form.Select aria-label="Choose Semester">
-          <option value="1">Choose Semester 1</option>
-          <option value="2">Choose Semester 2</option>
-          <option value="3">Choose Semester 3</option>
-        </Form.Select>
+      <CoursesHeader bab={bab}/>
+      <div className="row">
+        <div className="p-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum
+        </div>
       </div>
-    </div>
-    <div className="row">
-      {listMateri.map((val: any, idx: any) => {
-        return (
-          <div className="col-md-3 mt-4">
-            <div className="rounded px-4 py-3 bg-white shadow">
-              <div className="row fs-4 fw-bolder">{val.Title}</div>
-              <div className="row fs-5 mt-2">{val.Chapter}</div>
-              <div className="row fs-6 mt-2">{val.SubTitle}</div>
-            </div>
-          </div>
-        );
-      })}
     </div>
   </AdminLayout>
 );
 
-export default Course;
+export default Session;
