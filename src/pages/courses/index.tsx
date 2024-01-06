@@ -74,35 +74,35 @@ const listMateri = [
     Title: "Science",
     Chapter: "Chapter 4 of 12",
     SubTitle: "Vector",
-    Guru: "Novaria Kemmel S.Pd.",
+    Kelas: "XI IPA 2",
   },
   {
     id: 2,
     Title: "Math",
     Chapter: "Chapter 4 of 12",
     SubTitle: "Aljabr",
-    Guru: "Novaria Kemmel S.Pd.",
+    Kelas: "XI IPA 2",
   },
   {
     id: 3,
     Title: "Biology",
     Chapter: "Chapter 4 of 12",
     SubTitle: "Fotosintesis",
-    Guru: "Novaria Kemmel S.Pd.",
+    Kelas: "XI IPA 2",
   },
   {
     id: 4,
     Title: "Cheimstry",
     Chapter: "Chapter 4 of 12",
     SubTitle: "Periodic Table",
-    Guru: "Novaria Kemmel S.Pd.",
+    Kelas: "XI IPA 2",
   },
   {
     id: 5,
     Title: "Cheimstry",
     Chapter: "Chapter 4 of 12",
     SubTitle: "Periodic Table",
-    Guru: "Novaria Kemmel S.Pd.",
+    Kelas: "XI IPA 2",
   },
 ];
 
@@ -123,7 +123,7 @@ const Course: NextPage = () => (
         <thead>
           <tr>
             <th>Mata Pelajaran</th>
-            <th>Guru</th>
+            <th>Kelas</th>
             <th>Konten</th>
           </tr>
         </thead>
@@ -132,7 +132,7 @@ const Course: NextPage = () => (
             return (
               <tr>
                 <td>{val.Title}</td>
-                <td>{val.Guru}</td>
+                <td>{val.Kelas}</td>
                 <td>
                   <div className="ps-2">
                     <Button

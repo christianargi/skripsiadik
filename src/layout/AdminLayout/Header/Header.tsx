@@ -20,12 +20,17 @@ export default function Header(props: HeaderProps) {
 
   const finalPathname = () => {
     console.log("pathname", pathname);
-    const finalpathname = pathname.substring(1);
+    if (pathname !== null) {
+      const finalpathname = pathname.substring(1);
 
-    if (pathname === "/") {
-      return "Dashboard";
-    } else {
-      return finalpathname.charAt(0).toUpperCase() + finalpathname.slice(1);
+      if (pathname === "/") {
+        return "Dashboard";
+      } else {
+        return finalpathname.charAt(0).toUpperCase() + finalpathname.slice(1);
+      }
+    }
+    else{
+      return "undefined"
     }
   };
 

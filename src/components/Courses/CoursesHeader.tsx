@@ -11,7 +11,7 @@ export const CoursesHeader = (props: IProps) => {
   const { bab } = props;
   return (
     <>
-      <div className="border-bottom border-dark justify-content-between row">
+      <div className="border-bottom border-dark justify-content-between row pb-3">
         <div className="col-1 fs-3">
           <FaArrowLeft />
         </div>
@@ -35,7 +35,7 @@ export const CoursesHeader = (props: IProps) => {
       </div>
       <div className="border-bottom border-dark row py-3">
         <a className="col-2 font-black">Session</a>
-        <a className="col-2 font-black">Discussion</a>
+        <a className="col-2 font-black">Reminder</a>
         <a className="col-2 font-black">Scoring</a>
       </div>
       <div className="border-bottom border-dark row py-2">

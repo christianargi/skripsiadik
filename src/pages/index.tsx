@@ -37,31 +37,23 @@ Chart.register(
 const forumList: any = [
   {
     id: "1",
-    forumName: "Sosiologi",
+    Title: "Libur Nasional",
+    SubTitle: "Lorem Ipsum asdasdasd asd asda asd",
   },
   {
     id: "2",
-    forumName: "Ekonomi",
+    Title: "Ujian Semester",
+    SubTitle: "Lorem Ipsum asdasdasd asd asda asd",
   },
   {
     id: "3",
-    forumName: "Sejarah",
+    Title: "Study Tour",
+    SubTitle: "Lorem Ipsum asdasdasd asd asda asd",
   },
   {
     id: "4",
-    forumName: "Matematika",
-  },
-  {
-    id: "5",
-    forumName: "Kimia",
-  },
-  {
-    id: "6",
-    forumName: "Fisika",
-  },
-  {
-    id: "7",
-    forumName: "Biologi",
+    Title: "Libur Nasional",
+    SubTitle: "Lorem Ipsum asdasdasd asd asda asd",
   },
 ];
 
@@ -81,6 +73,9 @@ const Home: NextPage = () => (
                 height={500}
                 style={{ width: "100%", height: "auto" }}
               />
+              <Carousel.Caption>
+                <p>Peningkatan Literasi</p>
+              </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <Image
@@ -91,6 +86,9 @@ const Home: NextPage = () => (
                 height={500}
                 style={{ width: "100%", height: "auto" }}
               />
+              <Carousel.Caption>
+                <p>Peningkatan Literasi</p>
+              </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <Image
@@ -101,24 +99,26 @@ const Home: NextPage = () => (
                 height={500}
                 style={{ width: "100%", height: "auto" }}
               />
+              <Carousel.Caption>
+                <p>Peningkatan Literasi</p>
+              </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
         </div>
       </div>
       <div className="col-md-6 ">
-        <div className="row ps-3 pb-2 fs-4">Forum</div>
+        <div className="row ps-3 pb-2 fs-4">Notification</div>
         <div className="row px-3 ">
           <Card className="max-height-forum-dashboard overflow-scroll pe-4">
             <Card.Body>
               {forumList.map((value: any, idx: any) => {
                 return (
-                  <div className="border px-2 rounded-2 py-2 mb-2 flex justify-content-center row align-item-center selection-forum" key={idx}>
-                    <div className="d-flex flex-column col-2 align-items-center justify-content-center">
-                      <IoChatbubblesOutline className="fs-3" />
-                    </div>
-                    <div className="d-flex flex-column col-4 fs-5">
-                      {value.forumName}
-                    </div>
+                  <div
+                    className="border px-4 rounded-2 py-2 mb-2 flex justify-content-center row align-item-center selection-forum bg-blue-small"
+                    key={idx}
+                  >
+                    <div className="fs-5">{value.Title}</div>
+                    <div className="fs-6 font-grey">{value.SubTitle}</div>
                   </div>
                 );
               })}
